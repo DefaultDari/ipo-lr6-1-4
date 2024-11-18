@@ -4,8 +4,8 @@
 #- Сортирует найденные строки в порядке их длины (от самой короткой к самой длинной) и выводит их.
 
 search_string = input("Введите строку для поиска: ")  # Запрос строки для поиска
-with open("text.txt", 'r', encoding='utf-8') as file: # Открываем файл с учетом кодировки
-    lines = file.readlines()  # Читаем строки в файле
+file = open("text.txt", 'r', encoding='utf-8') # Открываем файл с учетом кодировки
+lines = file.readlines()  # Читаем строки в файле
 search_string = search_string.lower() # Приводим подстроку к нижнему регистру для нечувствительности к регистру
 matching_lines = [line.strip() for line in lines if search_string in line.lower()] # Находим строки, содержащие подстроку, независимо от регистра
 print(f"\nКоличество строк, содержащих подстроку '{search_string}': {len(matching_lines)}") # Выводим количество найденных строк
