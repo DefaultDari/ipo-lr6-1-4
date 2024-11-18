@@ -14,3 +14,4 @@ matching_lines.sort(key=len) # Сортируем строки по длине
 print("Строки, содержащие подстроку, отсортированные по длине:")
 for line in matching_lines:
     print(line)
+file.close() #Закрытие файла
