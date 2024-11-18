@@ -8,9 +8,9 @@ file = open("text.txt", 'r', encoding='utf-8') # Открываем файл с 
 lines = file.readlines()  # Читаем строки в файле
 search_string = search_string.lower() # Приводим подстроку к нижнему регистру для нечувствительности к регистру
 matching_lines = [line.strip() for line in lines if search_string in line.lower()] # Находим строки, содержащие подстроку, независимо от регистра
-print(f"\nКоличество строк, содержащих подстроку '{search_string}': {len(matching_lines)}") # Выводим количество найденных строк
+print(f"Количество строк, содержащих подстроку '{search_string}': {len(matching_lines)}") # Выводим количество найденных строк
 matching_lines.sort(key=len) # Сортируем строки по длине
 # Выводим отсортированные строки
-print("\nСтроки, содержащие подстроку, отсортированные по длине:")
+print("Строки, содержащие подстроку, отсортированные по длине:")
 for line in matching_lines:
     print(line)
